@@ -1,1 +1,120 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+:root {
+
+  --number-button-background-color: white;
+  --number-button-background-color-hover: rgb(209, 204, 204);
+  --other-button-text-color: #ff7433;
+  --buttons-background-color: white;
+  --number-button-text-color: black;
+  --number-color: white;
+  --result-color: black;
+  --result-background-color: white;
+  --dialog-background-color: rgb(246, 244, 244);
+  --dialog-text-color: black;
+  --dialog-li-hover: grey;
+  --dialog-li-text-color-in-hover: white;
+  --equal-sign-button-text-color: white;
+  --equal-sign-button-background-color: #ff7433;
+  --equal-sign-button-text-color-in-hover: white;
+  --equal-sign-button-background-color-in-hover: #dc652d;
+  --font-family: 'Open Sans';
+  --container-background-color: white;
+}
+
+[data-theme="Dark"] {
+  --number-button-background-color: black;
+  --number-button-background-color-hover: rgb(49, 47, 47);
+  --other-button-text-color: #ff7433;
+  --buttons-background-color: black;
+  --number-button-text-color: white;
+  --number-color: white;
+  --result-color: white;
+  --result-background-color: black;
+  --dialog-background-color: rgb(246, 244, 244);
+  --dialog-text-color: black;
+  --dialog-li-hover: grey;
+  --dialog-li-text-color-in-hover: white;
+  --equal-sign-button-text-color: white;
+  --equal-sign-button-background-color: #ff7433;
+  --equal-sign-button-text-color-in-hover: white;
+  --equal-sign-button-background-color-in-hover: #dc652d;
+  --font-family: 'Open Sans';
+  --container-background-color: black;
+}
+
+[data-theme="MehmetSpecialDesign"] {
+  --number-button-background-color: yellow;
+  --number-button-background-color-hover: rgb(197, 197, 54);
+  --other-button-text-color: rgb(121, 122, 121);
+  --buttons-background-color: yellow;
+  --number-button-text-color: black;
+  --number-color: white;
+  --result-color: yellow;
+  --result-background-color: black;
+  --dialog-background-color: rgb(246, 244, 244);
+  --dialog-text-color: black;
+  --dialog-li-hover: yellow;
+  --dialog-li-text-color-in-hover: black;
+  --equal-sign-button-text-color: white;
+  --equal-sign-button-background-color: black;
+  --equal-sign-button-text-color-in-hover: white;
+  --equal-sign-button-background-color-in-hover: rgb(36, 35, 35);
+  --font-family: 'Open Sans';
+  --container-background-color: black;
+
+}
+
+[data-theme="Spring"] {
+  --number-button-background-color: #c2ffc2;
+  --number-button-background-color-hover: rgb(209, 204, 204);
+  --other-button-text-color: #ff7433;
+  --buttons-background-color: white;
+  --number-button-text-color: black;
+  --number-color: white;
+  --result-color: black;
+  --result-background-color: white;
+  --dialog-background-color: rgb(246, 244, 244);
+  --dialog-text-color: black;
+  --dialog-li-hover: #ff9e59;
+  --dialog-li-text-color-in-hover: white;
+  --equal-sign-button-text-color: white;
+  --equal-sign-button-background-color: #ff7433;
+  --equal-sign-button-text-color-in-hover: white;
+  --equal-sign-button-background-color-in-hover: #dc652d;
+  --font-family: 'Open Sans';
+  --container-background-color: white;
+
+}
+
+[data-theme="Blue"] {
+  --number-button-background-color: white;
+  --number-button-background-color-hover: rgb(209, 204, 204);
+  --other-button-text-color: #085ec9;
+  --buttons-background-color: white;
+  --number-button-text-color: red;
+  --number-color: white;
+  --result-color: red;
+  --result-background-color: white;
+  --dialog-background-color: rgb(246, 244, 244);
+  --dialog-text-color: black;
+  --dialog-li-hover:#085ec9;
+  --dialog-li-text-color-in-hover: white;
+  --equal-sign-button-text-color: white;
+  --equal-sign-button-background-color: #085ec9;
+  --equal-sign-button-text-color-in-hover: white;
+  --equal-sign-button-background-color-in-hover: #1e5292;
+  --font-family: 'Open Sans';
+  --container-background-color: white;
+
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+button {
+  all: unset;
+}

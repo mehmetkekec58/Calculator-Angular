@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="result"><span class="result-text">{{result}}</span>
+    <span *ngIf="value.active" class="value">={{value.value}}</span>
+  </div>
+  <div class="buttons" *ngFor="let buttonRow of buttons">
+    <button (click)="click(button)" class="button" [ngClass]="buttonColor(button)"  *ngFor="let button of buttonRow">{{button}}</button>
+  </div>
+  <div *ngIf="dialog == true" class="dialog">
+    <button (click)="closeDialog()" class="close">X</button>
+    <ul>
+      <li (click)="selectTheme(theme)"  *ngFor="let theme of themes">{{theme}}</li>
+    </ul>
+  </div>
+</div>
