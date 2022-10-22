@@ -16,7 +16,7 @@ export class CalculatorComponent implements OnInit {
   EQUALS: string = "=";
   ZERO: string = "0";
 
-  operationSign = "+-x÷%";
+  operationSign = "+-x÷";
   multiplicationDivision = "x÷";
   additionSubstraction = "+-";
   numbers: string = "0123456789";
@@ -56,6 +56,9 @@ export class CalculatorComponent implements OnInit {
         break;
       case this.EQUALS:
         this.equalsButton();
+        break;
+      case "%":
+        this.percent();
         break;
       case ",":
         if (this.result == this.ZERO)
@@ -114,6 +117,27 @@ export class CalculatorComponent implements OnInit {
     document.documentElement.setAttribute('data-theme', themeName);
     this.dialog = false;
   }
+
+  percent() {
+    let value: null | number = null;
+    let number = 0;
+    if (this.operationSign.includes(this.result[this.result.length - 1])) {
+      return;
+    }
+    for (let i = this.result.length - 1; i > 0; i--) {
+      if (this.operationSign.includes(this.result[i])) {
+        value = i;
+        break;
+      }
+    }
+    if (value != null) {
+      number = Number(this.result.substring(value + 1, this.result.length))
+      this.result = this.result.substring(0, value + 1) + String(number / 100)
+    } else {
+      number = Number(this.result)
+      this.result = String(number / 100);
+    }
+  }
   buttonColor(button: string): string {
     if (!this.numbers.includes(button)) {
       switch (button) {
@@ -171,10 +195,10 @@ export class CalculatorComponent implements OnInit {
         return Number(firstNumber) * Number(secondNumber);
       case "÷":
         return Number(firstNumber) / Number(secondNumber);
-        case "+":
-          return Number(firstNumber) + Number(secondNumber);
-        case "-":
-          return Number(firstNumber) - Number(secondNumber);
+      case "+":
+        return Number(firstNumber) + Number(secondNumber);
+      case "-":
+        return Number(firstNumber) - Number(secondNumber);
       default:
         return 0;
     }
