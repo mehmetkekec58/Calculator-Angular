@@ -34,7 +34,7 @@
 
 .buttons {
   background-color: var(--buttons-background-color);
-  width: 95%;
+  width: 100%;
   display: flex;
   justify-content: space-evenly;
   padding: 5px;
@@ -111,7 +111,6 @@ li {
   font-weight: 700;
   border-radius: 15px;
   color: var(--dialog-text-color);
-
 }
 
 li:hover {

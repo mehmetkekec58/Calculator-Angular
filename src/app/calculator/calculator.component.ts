@@ -62,9 +62,9 @@ export class CalculatorComponent implements OnInit {
         break;
       case ",":
         if (this.result == this.ZERO)
-          this.result = `${this.ZERO},`
+          this.result = `${this.ZERO}.`
         else
-          this.result = this.result + button;
+          this.result = this.result + ".";
         break;
       default:
         this.operation(button);
@@ -76,6 +76,7 @@ export class CalculatorComponent implements OnInit {
     this.value.active = true
     this.value.value = this.calculate(this.result);
   }
+
   delete() {
     if (this.result.length > 0 && this.result !== this.ZERO) {
       this.result = this.result.substring(0, this.result.length - 1);
