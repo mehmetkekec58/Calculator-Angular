@@ -120,6 +120,12 @@ export class CalculatorComponent implements OnInit {
   }
 
   percent() {
+    if(this.value.active){
+      this.result = String(Number(this.value.value) / 100)
+      this.value.active = false;
+      return;
+    }
+
     let value: null | number = null;
     let number = 0;
     if (this.operationSign.includes(this.result[this.result.length - 1])) {
@@ -155,8 +161,20 @@ export class CalculatorComponent implements OnInit {
   calculate(resultValue: string) {
     var calculated = false;
     let value = 0;
+    let contain = false;
+
+    for (let i = 0; i < resultValue.length; i++) {
+      if(this.operationSign.includes(resultValue[i])){
+        contain = true;
+        break;
+      }
+    }
+    if(!contain){
+      return resultValue;
+    }
     let array = this.operationSignFind(resultValue);
     while (!calculated) {
+      console.log(array)
       if (this.multiplicationDivision.includes(array[1])) {
         value = this.process(array[0], array[1], array[2])
         array.splice(0, 3, String(value));
